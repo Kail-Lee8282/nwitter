@@ -18,7 +18,6 @@ const NweetFactory = ({userObj}) =>{
     event.preventDefault();
     let attachmentUrl = null;
     
-    console.log(attachment && "A");
     if (attachment !== "" && attachment !== undefined) {
       // file upload - firestorage
       const attachmentRef = ref(storageService, `${userObj.uid}/${uuidv4()}`);
@@ -91,6 +90,7 @@ const NweetFactory = ({userObj}) =>{
         <FontAwesomeIcon icon={faPlus} />
       </label>
       <input
+        ref={inputUploadRef}
         id="attach-file"
         type="file"
         accept="image/*"
