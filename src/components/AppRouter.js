@@ -6,7 +6,7 @@ import Navigation from "./Navigation";
 
 const AppRouter = ({ refreshUser, isLoggedIn, userObj }) => {
   return (
-    <HashRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       {isLoggedIn && <Navigation userObj={userObj} />}
       <div
           style={{
